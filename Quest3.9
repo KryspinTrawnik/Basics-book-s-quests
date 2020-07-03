@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Wprowadz ilosc wierszy");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++) \\ program showing triangle using "*"
+            {
+                for (int j = n; j >= i; j--)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadKey();
+        }
+    }
+}
