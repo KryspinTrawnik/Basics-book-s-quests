@@ -1,0 +1,30 @@
+# Bausing System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Podaj ilosc poziomow:");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("******");
+            for (int i = 0; i < a; i++)
+            {
+                    Console.WriteLine("*    *");
+                Console.Write("\n");
+            }
+            Console.WriteLine("******");
+            Console.ReadKey();  
+
+            
+            
+
+        }
+    }
+}
