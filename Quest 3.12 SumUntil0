@@ -1,0 +1,19 @@
+namespace ConsoleApp3
+{
+    class SumUntil0 
+    {
+        static void Main(string[] args)
+        {
+            double num, equal = 0;
+            do
+            {
+                Console.WriteLine("Give the number, please");
+                num = Convert.ToDouble(Console.ReadLine());
+                equal += num;
+            } while (num != 0);
+            Console.WriteLine("Sum up of your input is " + equal);
+            Console.ReadKey(true);
+        }
+    }
+   
+}
