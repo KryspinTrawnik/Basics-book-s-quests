@@ -1,0 +1,28 @@
+namespace ConsoleApp3
+{
+    class Triangle
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the number of the size");
+            int n = int.Parse(Console.ReadLine());
+            for(int i = 1; i <= n; i++)
+            {
+                for (int j = n; j >= 1; j--)
+                {
+                    if (i >= j)
+                    {
+                        Console.Write("*");
+                    }
+                    else
+                        Console.Write(" ");
+                }
+                Console.WriteLine();
+             }
+
+            Console.ReadKey(true);
+        }
+    }
+   
+}
+
