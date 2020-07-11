@@ -1,0 +1,19 @@
+namespace ConsoleApp3
+{
+    class Sum100 
+    {
+        static void Main(string[] args)
+        {
+            int Sum100 = 0;
+            for (int n = 0; n <= 200; n++)
+            {
+                Sum100 = Sum100 + n;
+                Console.WriteLine(Sum100 + " number added " + n);
+                    if(Sum100 >= 100)
+                    break;
+            }
+            Console.ReadKey(true);
+        }
+    }
+   
+}
