@@ -1,0 +1,29 @@
+namespace ConsoleApp3
+{
+    class FindPerfectNum
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter a number up to which program will find perfect numbers:");
+            int num = Convert.ToInt32(Console.ReadLine());
+            for (int j = 1; j <= num; j++)
+            {
+                int i = 1, sum = 0;
+                while (i < j)
+                {
+                    if (j % i == 0)
+                    {
+                        sum = sum + i;
+                    }
+                    i++;
+                }
+                if (sum == j)
+                {
+                    Console.WriteLine(i + "is perfect number");
+                }
+            }
+                Console.ReadKey(true);
+        }
+    }
+   
+}
