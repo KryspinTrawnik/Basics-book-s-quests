@@ -1,0 +1,42 @@
+namespace ConsoleApp3
+{
+    class ArrayMinMax
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("How many elements do you want to enter");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[n];
+            int max = array[0];
+            int min = 1;
+            int sum = 0; 
+            double avrage = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine("Please enter {0} number", i + 1);
+                array[i] = Convert.ToInt32(Console.ReadLine());
+
+            }
+            for (int i = 0; i < array.Length; i++)
+            {
+                sum += array[i];
+                if (array[i] > max)
+                {
+                    max = array[i];
+                }
+                if (array[i] <= min )
+                {
+                    min = array[i];
+
+                }
+            }
+            avrage = (double)sum / array.Length;
+            Console.WriteLine("The biggest value is {0} and positon is {1}", max, Array.IndexOf(array, max ));
+            Console.WriteLine("The smallest values is {0} and positon is {1}", min, Array.IndexOf(array, min));
+            Console.WriteLine("The avrage of the array is {0}", avrage); 
+            Console.ReadKey();
+        }
+    }
+   
+}
