@@ -1,0 +1,41 @@
+    class Weekdays
+    {
+        static void Main(string[] args)
+        {
+
+            string[,] weeekdays;
+            weeekdays = new string[7, 3]; 
+            weeekdays[0, 0] = "Poniedzialek";
+            weeekdays[1, 0] = "Wtorek";
+            weeekdays[0, 1] = "Monday";
+            weeekdays[1, 1] = "Tuesday";
+            weeekdays[0, 2] = "Montag";
+            weeekdays[1, 2] = "Dienstag";
+            weeekdays[2, 0] = "Sroda";
+            weeekdays[2, 1] = "Wednesday";
+            weeekdays[2, 2] = "Mittwoch";
+            weeekdays[3, 0] = "Czwartek";
+            weeekdays[3, 1] = "Thursday";
+            weeekdays[3, 2] = "Donnerstag";
+            weeekdays[4, 0] = "Piatek";
+            weeekdays[4, 1] = "Friday";
+            weeekdays[4, 2] = "Freitag";
+            weeekdays[5, 0] = "Sobota";
+            weeekdays[5, 1] = "Saturday";
+            weeekdays[5, 2] = "Samstag";
+            weeekdays[6, 0] = "Niedziela";
+            weeekdays[6, 1] = "Sunday";
+            weeekdays[6, 2] = "Sonntag";
+            for (int i = 0; i < weeekdays.GetLength(0); i++)
+            {
+                for (int j = 0; j < weeekdays.GetLength(1); j++)
+                {
+                    Console.Write("{0, -5},  ", weeekdays[i, j]);
+
+                }
+                Console.WriteLine();
+            }    
+            Console.ReadKey();
+        }
+    }
+   
