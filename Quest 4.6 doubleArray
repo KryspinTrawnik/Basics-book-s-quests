@@ -1,0 +1,30 @@
+namespace ConsoleApp3
+{
+    class doubleArray
+    {
+        static void Main(string[] args)
+        {
+
+            int[,] tab1 = new int[5, 5];
+            int sum = 0;
+            Random rand = new Random();
+            Console.WriteLine("Tab1");
+            for (int i = 0; i < tab1.GetLength(0); i++)
+            { 
+                for (int j = 0; j < tab1.GetLength(1); j++)
+                {
+                    tab1[i, j] = (int)rand.Next(1, 1000);
+                    Console.Write("{0,-5}", tab1[i, j]);
+                    if (j == i) 
+                    {
+                        sum += tab1[i, j];
+                    }
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("summary of diagonal numbers is: {0}", sum);
+            Console.ReadKey();
+        }
+    }
+   
+}
