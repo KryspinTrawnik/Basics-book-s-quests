@@ -1,0 +1,16 @@
+namespace ConsoleApp3
+{
+    class Wordcount
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter a text");
+            string text = Convert.ToString(Console.ReadLine());
+            int count = 0;
+            foreach (char word in text)
+                if (word == ' ') count++;
+            Console.WriteLine("There is " + (count + 1) + " words in text");
+            Console.ReadKey();
+        }
+    }
+}
