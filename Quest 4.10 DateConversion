@@ -1,0 +1,74 @@
+# Basics-book-s-quests
+class DateConversion
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter a date in DD-MM-YYYY");
+            string date = Convert.ToString(Console.ReadLine());
+            
+            if (date.IndexOf("01") == 3)
+            {
+                date = date.Substring(0, 2) + date.Substring(6);
+                date = date.Insert(2, " January ");
+            }
+            else if (date.IndexOf("02") == 3)
+            {
+                date = date.Substring(0, 2) + date.Substring(6);
+                date = date.Insert(2, " February ");
+            }
+            else if (date.IndexOf("03") == 3)
+            {
+                date = date.Substring(0, 2) + date.Substring(6);
+                date = date.Insert(2, " March ");
+            }
+            else if (date.IndexOf("04") == 3)
+            {
+                date = date.Substring(0, 2) + date.Substring(6);
+                date = date.Insert(2, " April ");
+            }
+            else if (date.IndexOf("05") == 3)
+            {
+                date = date.Substring(0, 2) + date.Substring(6);
+                date = date.Insert(2, " May ");
+            }
+            else if (date.IndexOf("06") == 3)
+            {
+                date = date.Substring(0, 2) + date.Substring(6);
+                date = date.Insert(2, " June ");
+            }
+            else if (date.IndexOf("07") == 3)
+            {
+                date = date.Substring(0, 2) + date.Substring(6);
+                date = date.Insert(2, " July ");
+            }
+            else if (date.IndexOf("08") == 3)
+            {
+                date = date.Substring(0, 2) + date.Substring(6);
+                date = date.Insert(2, " August");
+            }
+            else if (date.IndexOf("09") == 3)
+            {
+                date = date.Substring(0, 2) + date.Substring(6);
+                date = date.Insert(2, " September ");
+            }
+            else if (date.IndexOf("10") == 3)
+            {
+                date = date.Substring(0, 2) + date.Substring(6);
+                date = date.Insert(2, " October ");
+            }
+            else if (date.IndexOf("11") == 3)
+            {
+                date = date.Substring(0, 2) + date.Substring(6);
+                date = date.Insert(2, " November ");
+            }
+            else if (date.IndexOf("12") == 3)
+            {
+                date = date.Substring(0, 2) + date.Substring(6);
+                date = date.Insert(2, " December ");
+            }
+            Console.WriteLine("Converted date is {0}", date);
+            Console.ReadKey();
+                
+            
+
+        }
