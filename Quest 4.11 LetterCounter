@@ -1,0 +1,35 @@
+namespace ConsoleApp3
+{
+    class LetterCounter
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Please enter a text");
+            string text = Console.ReadLine();
+            text.ToLower();
+            char[] tab1 = text.ToCharArray();
+            Array.Sort(tab1);
+            int letterqty = 0;
+            char start = tab1[0];
+            for (int i = 0; i < tab1.Length; i++)
+            {
+                if (start == tab1[i])
+                {
+                    letterqty++;
+                }
+
+                else if (start != tab1[i])
+                {
+
+                    Console.Write("{0} = {1} ", start, letterqty);
+                    letterqty = 1;
+                    start = tab1[i];
+                }
+                
+            }
+            Console.Write("{0} = {1} ", start, letterqty);
+            Console.ReadKey();
+        }
+    }
+}
