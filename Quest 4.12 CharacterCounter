@@ -1,0 +1,38 @@
+namespace ConsoleApp3
+{
+    class CharacterCounter
+    {
+        static void Main(string[] args)
+        {
+
+            string text = "W parę godzin później, gdy noc zbierała się do odejścia,\n" +
+ "Puchatek obudził się nagle z uczuciem dziwnego przygnębienia.\n" +
+ "To uczucie dziwnego przygnębienia miewał już nieraz i wiedział,\n" +
+ "co ono oznacza. Był głodny. Więc poszedł do spiżarni,\n" +
+ "wgramolił się na krzesełko, sięgnął na górną półkę, ale nic nie znalazł.";
+            int letterqty = 0, lineqty = 0, position, start = 0, n = 1;
+            while ((position = text.IndexOf("\n", start)) >= 0)
+            {
+                lineqty++;
+                start = position + 2;
+            }
+            Console.WriteLine("There is {0} rows in the text", lineqty + 1);
+            foreach (char i in text)// Caounting charactes
+            {
+                if (i != '\n')
+                {
+                    letterqty++;
+                }
+                else if (i == '\n')
+                {
+                    Console.WriteLine("Numbers of characters in row {0} is {1}", n, letterqty);
+                    letterqty = 0;
+                    n++;
+                }
+            }
+            Console.WriteLine("Numbers of characters in row {0} is {1}", n, letterqty);
+            
+            Console.ReadKey();
+        }    
+    }
+}
